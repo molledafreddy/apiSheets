@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         //'Sheets' => Revolution\Google\Sheets\Sheets::class,
+        'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
 
     ],
 
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         //'Sheets' => Revolution\Google\Sheets\Sheets::class,
+        
 
     ],
 

@@ -18,7 +18,9 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
 
-Route::get('/get-sheet', 'SheetController@getSheets')->name('get.sheet');
 		
 });
+Route::get('get-sheet', 'SheetController@getSheets')->name('get.sheet');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     
