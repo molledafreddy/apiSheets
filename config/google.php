@@ -20,6 +20,7 @@ return [
     'client_id'       => env('GOOGLE_CLIENT_ID', ''),
     'client_secret'   => env('GOOGLE_CLIENT_SECRET', ''),
     'redirect_uri'    => env('GOOGLE_REDIRECT', ''),
+    //GOOGLE_APPLICATION_CREDENTIALS =apiSheets\credentials.json,
     //'scopes'          => [],
     'scopes'          => [\Google_Service_Sheets::DRIVE, \Google_Service_Sheets::SPREADSHEETS],
     'access_type'     => 'online',
@@ -50,12 +51,13 @@ return [
         /*
         | Enable service account auth or not.
         */
-        'enable' => env('GOOGLE_SERVICE_ENABLED', false),
+        'enable' => env('GOOGLE_SERVICE_ENABLED', true),
 
         /*
         | Path to service account json file
         */
-        'file' => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', storage_path('client_secret.json'))
+        //'file' => env('GOOGLE_SERVICE_ACCOUNT_JSON_LOCATION', storage_path('credentials.json'))
+        'file' => env('GOOGLE_APPLICATION_CREDENTIALS', storage_path('credentials.json'))
         //'file'    => storage_path('client_secret.json'),
 
     ],
